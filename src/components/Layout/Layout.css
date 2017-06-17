@@ -1,0 +1,31 @@
+@import '../type-reset.css';
+@import '../variables.css';
+
+/*
+ * Base styles
+ * ========================================================================== */
+
+html {
+  color: #4A4A4A;
+  font-weight: 100;
+  font-size: 1em; /* ~16px; */
+  font-family: var(--font-family-base);
+  line-height: 1.375; /* ~22px */
+  background: #FEFBF7;
+}
+* {
+  font-family: inherit;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  opacity: .66;
+  transition: opacity .4s ease;
+}
+
+a:hover {
+  opacity: .9;
+}
