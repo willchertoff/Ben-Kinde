@@ -6,8 +6,10 @@ import client from '../../contentful-client';
 
 const styles = {
   fontSize: '38px',
-  margin: '1em 0 0 1em',
-  fontFamily: 'GaramondPremrPro-Med',
+  margin: '2em 0 0 2em',
+  fontFamily: 'Gilroy-Bold',
+  letterSpacing: '2px',
+  textTransform: 'uppercase',
 };
 
 export default class Title extends React.Component {

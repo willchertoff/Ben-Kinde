@@ -1,58 +1,78 @@
 import React from 'react';
+import withStyles from 'isomorphic-style-loader/lib/withStyles';
 
 import client from '../../contentful-client';
 
-import Link from '../Link';
+import NavigationLink from '../NavigationLink';
+
+import s from './index.css';
 
 const styles = {
-  margin: '26px 0 0 38px',
-  fontFamily: 'ProximaNova-Regular',
+  margin: '26px 0 0 76px',
+  fontFamily: 'Gilroy-Light',
   textTransform: 'uppercase',
 };
 
 const linkStyle = {
   display: 'block',
-  fontFamily: 'ProximaNova-Regular',
-  fontSize: '18px',
+  fontFamily: 'Gilroy-Light',
+  fontSize: '36px',
   letterSpacing: '1px',
-  color: 'black',
   textDecoration: 'none',
   lineHeight: '2em',
 };
 
-export default class Navigation extends React.Component {
+class Navigation extends React.Component {
 
   constructor(props) {
     super(props);
     this.state = {
-      links: [],
+      projectCategories: [],
+      activeCategory: null,
+      stage: 'clear',
     };
   }
 
   componentDidMount() {
-    client.getEntries({ content_type: 'primaryNavigation' })
+    client.getEntries({ content_type: 'projectCategory' })
       .then((entries) => {
         this.setState({
-          links: this.state.links.concat(entries.items['0'].fields.primaryNavigationLinks),
+          projectCategories: this.state.projectCategories.concat(entries.items),
         });
       });
+  }
+
+  setActiveCategory = (category) => {
+    let toSet = category;
+    if (this.state.activeCategory === category) {
+      toSet = null;
+    }
+    this.setState({
+      activeCategory: toSet,
+    });
   }
   render() {
     return (
       <div style={styles} className="nav">
-        {
-          this.state.links.map(link => (
-            <Link
-              key={link.fields.slug}
-              to={link.fields.slug}
-              style={linkStyle}
-            >
-              {link.fields.text}
-            </Link>
-          ),
-          )
-        }
+        <div className={s.pane_1}>
+          {
+            this.state.projectCategories.map(category => (
+              <NavigationLink
+                key={category.fields.categoryTitle}
+                activeCategory={this.state.activeCategory}
+                name={category.fields.categoryTitle}
+                onClick={this.setActiveCategory}
+              />
+            ),
+            )
+          }
+        </div>
+        <div className={s.pane_2}>
+
+        </div>
       </div>
     );
   }
 }
+
+export default withStyles(s)(Navigation);
