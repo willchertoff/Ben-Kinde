@@ -10,10 +10,11 @@ const linkStyle = (activeCategory, name) => ({
   letterSpacing: '1px',
   textDecoration: 'none',
   lineHeight: '2em',
+  color: '#9a9790',
   opacity: activeCategory ? (
     activeCategory === name ? 1 : 0.1
   ) : (
-    0.4
+    1
   ),
 });
 
@@ -27,19 +28,13 @@ const symbolStyle = (activeCategory, name) => ({
 
 const NavigationLink = ({ onClick, activeCategory, name }) => (
   <div className={s.link} style={linkStyle(activeCategory, name)}>
-    <span style={symbolStyle(activeCategory, name)} className={s.symbol}>
-      {
-        activeCategory ? (
-          activeCategory === name ? '-' : ''
-        ) : (
-          ''
-        )
-      }
-    </span>
     <a
       key={name}
       role="presentation"
       onClick={() => onClick(name)}
+      style={{
+        textTransform: 'capitalize',
+      }}
     >
       {name}
     </a>

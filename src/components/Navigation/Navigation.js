@@ -4,6 +4,7 @@ import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import client from '../../contentful-client';
 
 import NavigationLink from '../NavigationLink';
+import ProjectMenu from '../ProjectMenu';
 
 import s from './index.css';
 
@@ -11,15 +12,6 @@ const styles = {
   margin: '26px 0 0 76px',
   fontFamily: 'Gilroy-Light',
   textTransform: 'uppercase',
-};
-
-const linkStyle = {
-  display: 'block',
-  fontFamily: 'Gilroy-Light',
-  fontSize: '36px',
-  letterSpacing: '1px',
-  textDecoration: 'none',
-  lineHeight: '2em',
 };
 
 class Navigation extends React.Component {
@@ -53,7 +45,7 @@ class Navigation extends React.Component {
   }
   render() {
     return (
-      <div style={styles} className="nav">
+      <div style={styles} className={s.root}>
         <div className={s.pane_1}>
           {
             this.state.projectCategories.map(category => (
@@ -67,9 +59,13 @@ class Navigation extends React.Component {
             )
           }
         </div>
-        <div className={s.pane_2}>
-
-        </div>
+        {
+          this.state.activeCategory ? (
+            <ProjectMenu
+              activeCategory={this.state.activeCategory}
+            />
+          ) : ('')
+        }
       </div>
     );
   }

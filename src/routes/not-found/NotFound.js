@@ -5,6 +5,7 @@ const styles = {
   fontSize: '38px',
   textAlign: 'center',
   fontFamily: 'GaramondPremrPro-Med',
+  color: '#9a9790',
 };
 
 const containerStyles = {
@@ -22,10 +23,10 @@ const messageStyles = {
 
 const linkStyle = {
   display: 'block',
-  fontFamily: 'ProximaNova-Regular',
+  fontFamily: 'Gilroy-Light',
   fontSize: '16px',
   letterSpacing: '1px',
-  color: 'black',
+  color: '#9a9790',
   lineHeight: '3em',
   textAlign: 'center',
 };

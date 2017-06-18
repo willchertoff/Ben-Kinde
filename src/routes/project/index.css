@@ -1,0 +1,16 @@
+.root {
+  display: flex;
+  margin: 38px 0;
+}
+.back {
+  min-width: 400px;
+  margin: 0 0 0 76px;
+}
+.title {
+  font-size: 38px;
+  font-family: 'Gilroy-Bold';
+  color: #9a9790;
+}
+.body a {
+  font-family: 'Gilroy-Bold';
+}

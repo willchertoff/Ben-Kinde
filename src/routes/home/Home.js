@@ -5,7 +5,6 @@ import Title from '../../components/Title';
 
 export default () => (
   <div>
-    <Title />
     <Navigation />
   </div>
 );

@@ -1,15 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-/* grab database */
-import client from '../../contentful-client';
-
 const styles = {
   fontSize: '38px',
   margin: '2em 0 0 2em',
-  fontFamily: 'Gilroy-Bold',
+  fontFamily: 'Gilroy-ExtraBold',
   letterSpacing: '2px',
-  textTransform: 'uppercase',
 };
 
 export default class Title extends React.Component {
@@ -17,7 +13,7 @@ export default class Title extends React.Component {
     text: PropTypes.string,
   }
   static defaultProps = {
-    text: '',
+    text: 'Ben Kinde',
   }
 
   constructor(props) {
@@ -25,11 +21,6 @@ export default class Title extends React.Component {
     this.state = {
       text: props.text,
     };
-  }
-
-  componentDidMount() {
-    client.getEntries({ content_type: 'title' })
-      .then(res => this.setState({ text: res.items[0].fields.text }));
   }
   render() {
     const {

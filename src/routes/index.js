@@ -11,6 +11,16 @@ const routes = {
       path: '/',
       load: () => import(/* webpackChunkName: 'home' */ './home'),
     },
+    {
+      path: '/projects',
+      action: () => console.log('Checking /projects for child routes'),
+      children: [
+        {
+          path: '/:slug',
+          load: () => import('./project'),
+        },
+      ],
+    },
     // Wildcard routes, e.g. { path: '*', ... } (must go last)
     {
       path: '*',

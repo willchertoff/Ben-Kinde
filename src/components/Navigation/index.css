@@ -1,3 +1,6 @@
+.root {
+  display: flex;
+}
 .pane_1 {
-  width: 33%;
+  min-width: 400px;
 }

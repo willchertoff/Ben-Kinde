@@ -48,9 +48,6 @@ ol {counter-reset: n;}
 ol li { counter-increment: n;}
 ol li:before{ content: counters(n, ".") ".";}
 
-/* "Red line" */
-p:first-letter, blockquote, blockquote:before { margin-left:2.5em}
-
 /* Word wrap http://jsfiddle.net/6uG82/4/ */
 pre,p,li,td {
 white-space: pre; /* CSS2 */
