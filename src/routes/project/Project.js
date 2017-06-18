@@ -6,6 +6,12 @@ import s from './index.css';
 
 import Link from '../../components/Link';
 
+const linkStyle = {
+  fontFamily: 'Gilroy-Bold',
+  letterSpacing: '1px',
+  color: '#9a9790',
+};
+
 const Project = ({ title, body }) => {
 
   const getParsedMarkdown = (content) => ({
@@ -14,7 +20,7 @@ const Project = ({ title, body }) => {
   return (
     <div className={s.root}>
       <div className={s.back}>
-        <Link to="/">Back</Link>
+        <Link to="/" style={linkStyle}>Back</Link>
       </div>
       <div className={s.project}>
         <h1 className={s.title}>{title}</h1>
