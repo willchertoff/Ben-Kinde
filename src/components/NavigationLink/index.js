@@ -5,12 +5,9 @@ import s from './index.css';
 
 const linkStyle = (activeCategory, name) => ({
   display: 'block',
-  fontFamily: 'Gilroy-Light',
-  fontSize: '36px',
   letterSpacing: '1px',
   textDecoration: 'none',
   lineHeight: '2em',
-  color: '#9a9790',
   opacity: activeCategory ? (
     activeCategory === name ? 1 : 0.1
   ) : (
@@ -32,9 +29,6 @@ const NavigationLink = ({ onClick, activeCategory, name }) => (
       key={name}
       role="presentation"
       onClick={() => onClick(name)}
-      style={{
-        textTransform: 'capitalize',
-      }}
     >
       {name}
     </a>

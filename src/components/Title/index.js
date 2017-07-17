@@ -11,6 +11,7 @@ const styles = {
 export default class Title extends React.Component {
   static propTypes = {
     text: PropTypes.string,
+    hideTitle: PropTypes.bool,
   }
   static defaultProps = {
     text: 'Ben Kinde',
@@ -27,6 +28,9 @@ export default class Title extends React.Component {
       text,
     } = this.state;
 
+    if (this.props.hideTitle) {
+      return <div />;
+    }
     return (
       <h1 style={styles}>{text}</h1>
     );

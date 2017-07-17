@@ -6,12 +6,12 @@
  * ========================================================================== */
 
 html {
-  color: #2a2829;
+  color: #f7f4ea;
   font-weight: 100;
   font-size: 1em; /* ~16px; */
   font-family: var(--font-family-base);
   line-height: 1.375; /* ~22px */
-  background: #fcfcfb;
+  background: #cb9691;
 }
 * {
   font-family: inherit;

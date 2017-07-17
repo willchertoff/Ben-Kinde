@@ -1,10 +1,20 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import Navigation from '../../components/Navigation';
-import Title from '../../components/Title';
 
-export default () => (
+const Home = ({ categories }) => (
   <div>
-    <Navigation />
+    <Navigation categories={categories} />
   </div>
 );
+
+Home.propTypes = {
+  categories: PropTypes.arrayOf(PropTypes.object),
+};
+
+Home.defaultProps = {
+  categories: [],
+};
+
+export default Home;

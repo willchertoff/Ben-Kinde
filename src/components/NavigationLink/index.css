@@ -8,6 +8,7 @@
   left: -26px;
   top: 50%;
   transform: translateY(-50%);
-  font-family: 'Gilroy-Light';
+  font-family: 'Gilroy-Bold';
   font-size: 26px;
+  letter-spacing: inherit;
 }

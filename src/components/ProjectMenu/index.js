@@ -9,14 +9,9 @@ import Link from '../Link';
 import client from '../../contentful-client';
 
 const linkStyle = {
-  fontSize: '36px',
   textDecoration: 'none',
-  textTransform: 'capitalize',
-  color: '#9a9790',
-  lineHeight: '72px',
   display: 'block',
   width: '100%',
-  fontFamily: 'Gilroy-Bold',
 };
 
 class ProjectMenu extends React.Component {

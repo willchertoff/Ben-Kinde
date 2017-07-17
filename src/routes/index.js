@@ -13,13 +13,16 @@ const routes = {
     },
     {
       path: '/projects',
-      action: () => console.log('Checking /projects for child routes'),
       children: [
         {
           path: '/:slug',
           load: () => import('./project'),
         },
       ],
+    },
+    {
+      path: '/problem',
+      load: () => import('./problem'),
     },
     // Wildcard routes, e.g. { path: '*', ... } (must go last)
     {

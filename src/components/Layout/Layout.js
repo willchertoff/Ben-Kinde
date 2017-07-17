@@ -10,12 +10,16 @@ import Title from '../Title';
 class Layout extends React.Component {
   static propTypes = {
     children: PropTypes.node.isRequired,
+    hideTitle: PropTypes.bool.isRequired,
   };
 
+  static defaultProps = {
+    hideTitle: false,
+  }
   render() {
     return (
       <div>
-        <Title />
+        <Title hideTitle={this.props.hideTitle} />
         {this.props.children}
       </div>
     );

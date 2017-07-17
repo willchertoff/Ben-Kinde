@@ -1,7 +1,6 @@
 import React from 'react';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
-
-import client from '../../contentful-client';
+import PropTypes from 'prop-types';
 
 import NavigationLink from '../NavigationLink';
 import ProjectMenu from '../ProjectMenu';
@@ -10,28 +9,21 @@ import s from './index.css';
 
 const styles = {
   margin: '26px 0 0 76px',
-  fontFamily: 'Gilroy-Light',
-  textTransform: 'uppercase',
 };
 
 class Navigation extends React.Component {
 
+  static propTypes = {
+    categories: PropTypes.arrayOf(PropTypes.object).isRequired,
+  }
+
   constructor(props) {
     super(props);
     this.state = {
-      projectCategories: [],
+      projectCategories: props.categories,
       activeCategory: null,
       stage: 'clear',
     };
-  }
-
-  componentDidMount() {
-    client.getEntries({ content_type: 'projectCategory' })
-      .then((entries) => {
-        this.setState({
-          projectCategories: this.state.projectCategories.concat(entries.items),
-        });
-      });
   }
 
   setActiveCategory = (category) => {
