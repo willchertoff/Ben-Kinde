@@ -1,0 +1,15 @@
+.container {
+  padding-right: 2em;
+  min-height: 500px;
+}
+.root {
+  transition: opacity .4s ease;
+  width: 50%;
+  text-align: right;
+  opacity: 0;
+  text-transform: uppercase;
+  font-family: 'Gilroy-Bold';
+  letter-spacing: 2px;
+  font-size: 52px;
+  line-height: 2.5em;
+}

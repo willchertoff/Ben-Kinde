@@ -10,6 +10,7 @@ import Navigation from '../Navigation';
 class Layout extends React.Component {
   static propTypes = {
     children: PropTypes.node.isRequired,
+    hideTitle: PropTypes.bool.isRequired,
   };
   constructor(props) {
     super(props);

@@ -1,0 +1,16 @@
+.root {
+  display: flex;
+  /*color: #f9faf5;*/
+}
+.pane_1 {
+  min-width: 400px;
+  width: 50%;
+  font-size: 64px;
+  text-transform: lowercase;
+  font-family: 'Gilroy-Bold';
+  letter-spacing: 2px;
+
+  a:hover {
+    opacity: .85;
+  }
+}
