@@ -12,14 +12,8 @@ const routes = {
       load: () => import(/* webpackChunkName: 'home' */ './home'),
     },
     {
-      path: '/projects',
-      action: () => console.log('Checking /projects for child routes'),
-      children: [
-        {
-          path: '/:slug',
-          load: () => import('./project'),
-        },
-      ],
+      path: '/about',
+      load: () => import(/* webpackChunkName: 'about' */ './about'),
     },
     // Wildcard routes, e.g. { path: '*', ... } (must go last)
     {
@@ -33,7 +27,7 @@ const routes = {
     const route = await next();
 
     // Provide default values for title, description etc.
-    route.title = `Ben Kinde | ${route.title || 'Untitled Page'}`;
+    route.title = `Knit | ${route.title || 'Untitled Page'}`;
     route.description = route.description || '';
 
     return route;

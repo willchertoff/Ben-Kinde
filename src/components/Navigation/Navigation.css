@@ -1,0 +1,57 @@
+.root {
+  position: relative;
+}
+.left_col {
+  width: 100px;
+  left: 0;
+  top: 0;
+  padding-top: 92px;
+  padding-bottom: 92px;
+  padding-left: 20px;
+  position: fixed;
+  height: 100vh;
+  color: white;
+  z-index: 2;
+}
+.right_col {
+  width: 100px;
+  right: 0;
+  top: 0;
+  padding-top: 92px;
+  padding-bottom: 92px;
+  padding-right: 20px;
+  position: fixed;
+  height: 100vh;
+  color: white;
+  z-index: 2;
+}
+.left_col__inner, .right_col__inner {
+  height: 100%;
+  font-size: 18px;
+  color: rgb(231, 231, 231);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.contact, .about, .home {
+  position: absolute;
+  &:hover {
+    opacity: .7;
+    text-decoration: line-through;
+  }
+}
+
+.about {
+  transform: rotate(-90deg);
+}
+
+.home {
+  top: 50%;
+  transform: translateY(-50%);
+  transform: rotate(-90deg);
+}
+
+.contact {
+  bottom: 0;
+  transform: rotate(-90deg);
+}

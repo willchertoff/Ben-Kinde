@@ -1,20 +1,11 @@
-/**
- * React Starter Kit (https://www.reactstarterkit.com/)
- *
- * Copyright © 2014-present Kriasoft, LLC. All rights reserved.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE.txt file in the root directory of this source tree.
- */
-
 :root {
   /*
    * Typography
    * ======================================================================== */
-
-  --font-family-heading: GaramondPremrPro-Med, 'HelveticaNeue-Light', sans-serif;
-  --font-family-base: 'Gilroy-Light', 'HelveticaNeue-Light', sans-serif;
-
+  /*--font-family-base: 'Didot', 'HelveticaNeue-Light', sans-serif;*/
+  /*--font-family-base: 'GaramondPremrPro-Med', 'HelveticaNeue-Light', sans-serif;*/
+  /*--font-family-base: 'NiveauGroteskLight', sans-serif;*/
+  --font-family-base: 'BigCaslon-Medium', sans-serif;
   /*
    * Layout
    * ======================================================================== */
